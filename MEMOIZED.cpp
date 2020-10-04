@@ -40,7 +40,17 @@ int memoized_Cut_Rod_Aux(int p[], int n, int r[])
 
 }
 
+int memorized_Cut_Rod(int p[], int n)
+{
+	int *r = new int[n + 1];
 
+	for (int i = 0; i < n + 1; i++)
+	{
+		r[i] = INT_MIN;
+	}
+	//return memoized_Cut_Rod_Aux(p, n, r);
+	return memoized_Cut_Rod_Aux(p, n, r);
+}
 
 
 
